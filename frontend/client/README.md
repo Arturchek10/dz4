@@ -1,69 +1,40 @@
-# React + TypeScript + Vite
+# Приложение для создания, редактирования и просмотра пользователей.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
 
-Currently, two official plugins are available:
+Это React-приложение с использованием Effector для управления состоянием, Material-UI для интерфейса и Axios для взаимодействия с backend API на NestJS. Позволяет создавать новых пользователей, редактировать существующих и просматривать список всех пользователей.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Основные фичи
 
-## Expanding the ESLint configuration
+- **Создание пользователя**  
+  Форма с валидацией email, имени, фамилии, пароля, телефона и статуса занятости.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Редактирование пользователя**  
+  Загрузка данных пользователя по ID, редактирование полей имя и фамилия.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Список пользователей**  
+  Таблица с данными пользователей: ID, имя, email, статус занятости и телефон.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Валидация данных**  
+  Валидация email и телефона, проверка минимальной длины пароля.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Интеграция с backend**  
+  Запросы к API для получения, создания и обновления пользователей.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Технологии
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React + TypeScript  
+- Effector (стейт-менеджмент)  
+- Material-UI (интерфейс)  
+- Axios (HTTP-запросы)  
+- React Router (маршрутизация)  
+- NestJS (backend, API)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Запуск проекта
+
+1. Установить зависимости  
+npm install
+2. Запустить  
+npm run dev
+
+Убедитесь, что backend сервер запущен и доступен по адресу http://localhost:4000/api/v1/users
