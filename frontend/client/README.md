@@ -29,6 +29,12 @@
 - Axios (HTTP-запросы)  
 - React Router (маршрутизация)  
 - NestJS (backend, API)
+## Фото
+<img width="1919" height="895" alt="image" src="https://github.com/user-attachments/assets/459ccc06-fbed-4c4c-90f6-fc7d34bb8652" />  
+<img width="1919" height="906" alt="image" src="https://github.com/user-attachments/assets/cb9e4d84-1337-487a-9901-1c23c849a2e7" />  
+<img width="1918" height="912" alt="image" src="https://github.com/user-attachments/assets/5329e1e9-107b-4d26-9156-8736090cde30" />
+
+
 
 ## Запуск проекта
 
