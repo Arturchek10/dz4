@@ -1,0 +1,28 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: #fff
+}
+
+
+.main-app{
+  display: flex;
+  flex: 1;
+}
+
+.user-table-component{
+  display: flex;
+  background-color: #fff;
+  padding-top: 5%;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.content{
+  width: 60%;
+  margin: 60px auto 0 auto;
+
+}
